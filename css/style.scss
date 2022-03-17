@@ -23,9 +23,7 @@ html {
   padding-top: 217px;
   padding-bottom: 493px;
 
-  background: no-repeat center
-      linear-gradient(180deg, rgba(0, 0, 0, 0) -7.35%, #000915 100%),
-    no-repeat center url(../img/bg-head.jpg);
+  background: no-repeat center url(../img/bg-head.jpg);
   background-size: cover;
 
   &__title {
@@ -120,9 +118,7 @@ html {
     }
 
     &:nth-of-type(3) {
-      background: no-repeat center
-          linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%),
-        no-repeat center url(../img/bg-game-3.jpg);
+      background: no-repeat center url(../img/bg-game-3.jpg);
     }
   }
 
@@ -159,8 +155,8 @@ html {
 
   .header {
     align-items: center;
-    padding-top: 239px;
-    padding-bottom: 239px;
+    padding-top: 180px;
+    padding-bottom: 185px;
 
     &__title {
       font-size: 32px;
@@ -196,8 +192,6 @@ html {
 
 @media (max-width: 375px) and (min-width: 320px) {
   .header {
-    background: no-repeat center
-        linear-gradient(180deg, rgba(0, 0, 0, 0) -7.35%, #000915 100%),
-      no-repeat center url(../img/bg-head-mobile.jpg);
+    background: no-repeat center url(../img/bg-head-mobile.jpg);
   }
 }
