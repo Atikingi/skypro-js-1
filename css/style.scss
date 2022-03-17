@@ -51,7 +51,7 @@ html {
   }
 
   &__span {
-    @extend .header__subtitle;
+    @extend .header__subtitle; //copy from another class
     font-weight: 700;
   }
 
