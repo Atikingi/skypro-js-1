@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
+@import "vars/vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-top: 217px;
+  padding-bottom: 493px;
+
+  background: no-repeat center
+      linear-gradient(180deg, rgba(0, 0, 0, 0) -7.35%, #000915 100%),
+    no-repeat center url(../img/bg-head.jpg);
+  background-size: cover;
+
+  &__title {
+    max-width: 700px;
+    margin-bottom: 32px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78px;
+    color: $color-header-white;
+  }
+
+  &__subtitle {
+    margin-bottom: 44px;
+    max-width: 500px;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    color: $color-header-white;
+  }
+
+  &__span {
+    @extend .header__subtitle;
+    font-weight: 700;
+  }
+
+  &__button {
+    width: 234px;
+    height: 50px;
+
+    background: $color-header-button;
+    border-radius: 30px;
+
+    transition: background 0.3s;
+
+    &:hover {
+      background: $color-header-button-hover;
+      cursor: pointer;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: $color-header-white;
+    text-decoration: none;
+  }
+}
+.games {
+  padding-top: 128px;
+  padding-bottom: 128px;
+
+  background: $color-background-games;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 32px;
+    column-gap: 32px;
+  }
+
+  &__item {
+    max-width: 379px;
+    min-width: 288px;
+    height: 300px;
+    display: flex;
+    flex: 1 1;
+
+    background: no-repeat center
+        linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%),
+      no-repeat center url(../img/bg-game-1.jpg);
+    border-radius: 16px;
+
+    transition: border 0.5s;
+
+    &:nth-of-type(2) {
+      background: no-repeat center
+          linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%),
+        no-repeat center url(../img/bg-game-2.jpg);
+    }
+
+    &:nth-of-type(3) {
+      background: no-repeat center
+          linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%),
+        no-repeat center url(../img/bg-game-3.jpg);
+    }
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+
+    padding-bottom: 32px;
+    padding-left: 32px;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: $color-games-white;
+    text-decoration: none;
+
+    &:hover {
+      border: 3px solid #44d2ff;
+      padding-left: 29px;
+      padding-bottom: 29px;
+      border-radius: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) and (min-width: 320px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .header {
+    align-items: center;
+    padding-top: 239px;
+    padding-bottom: 239px;
+
+    &__title {
+      font-size: 32px;
+      line-height: 39px;
+      text-align: center;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+      line-height: 22px;
+      text-align: center;
+    }
+  }
+
+  .games {
+    padding-top: 0;
+    padding-bottom: 128px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .games {
+    &__list {
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 375px) and (min-width: 320px) {
+  .header {
+    background: no-repeat center
+        linear-gradient(180deg, rgba(0, 0, 0, 0) -7.35%, #000915 100%),
+      no-repeat center url(../img/bg-head-mobile.jpg);
+  }
+}
