@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-html {
+body {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -147,6 +147,65 @@ html {
   }
 }
 
+.seasons-game {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 64px;
+  padding-top: 282px;
+  padding-bottom: 234px;
+  background-color: $color-background-games;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    color: $color-games-white;
+  }
+
+  &__description {
+    max-width: 584px;
+    margin-bottom: 32px;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    color: $color-games-white;
+  }
+
+  &__button {
+    width: 234px;
+    height: 49px;
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: $color-games-white;
+
+    background: $color-header-button;
+    border: 0;
+    border-radius: 30px;
+
+    transition: background 0.3s;
+
+    &:hover {
+      background: $color-header-button-hover;
+      cursor: pointer;
+    }
+  }
+}
+
 @media (max-width: 768px) and (min-width: 320px) {
   .center {
     padding-left: 16px;
@@ -175,6 +234,23 @@ html {
     padding-top: 0;
     padding-bottom: 128px;
   }
+
+  .seasons-game {
+    padding-top: 51px;
+    padding-bottom: 85px;
+
+    &__title {
+      text-align: center;
+      font-size: 32px;
+      line-height: 39px;
+    }
+
+    &__description {
+      text-align: center;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
 }
 
 @media (max-width: 1024px) {
@@ -188,10 +264,37 @@ html {
       justify-content: center;
     }
   }
+
+  .seasons-game {
+    justify-content: center;
+    padding-top: 51px;
+
+    &__content {
+      align-items: center;
+    }
+
+    &__description {
+      text-align: center;
+    }
+  }
 }
 
 @media (max-width: 375px) and (min-width: 320px) {
   .header {
     background: no-repeat center url(../img/bg-head-mobile.jpg);
+  }
+
+  .seasons-game {
+    &__title {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 350px) and (min-width: 320px) {
+  .seasons-game {
+    &__img {
+      display: none;
+    }
   }
 }
