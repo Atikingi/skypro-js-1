@@ -90,10 +90,13 @@ body {
   text-decoration: none;
 }
 
+.main {
+  background: #000915;
+}
+
 .games {
   padding-top: 128px;
-  padding-bottom: 128px;
-  background: #000915;
+  margin-bottom: 128px;
 }
 
 .games__list {
@@ -169,12 +172,19 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   row-gap: 64px;
-  padding-top: 282px;
-  padding-bottom: 234px;
-  background-color: #000915;
+  padding-top: 234px;
+  padding-bottom: 282px;
+}
+
+.seasons-game:nth-of-type(2) {
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
 }
 
 .seasons-game__content {

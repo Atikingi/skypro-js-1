@@ -25,20 +25,36 @@
           <li class="games__item"><a href="#" class="games__link">Игра 3</a></li>
         </ul>
       </section>
-      <section class="seasons-game center">
-        <div class="seasons-game__content">
-          <h1 class="seasons-game__title">Времена года!</h1>
-          <p class="seasons-game__description">
-            Нажмите кнопку играть, введите номер месяца (от 1 до 12) и вы узнаете к какому
-            времени года он относится
-          </p>
-          <button class="seasons-game__button" onclick="playSeasonGame()">Играть!</button>
+      <section class="seasons-games">
+        <div class="seasons-game center">
+          <div class="seasons-game__content">
+            <h1 class="seasons-game__title">Времена года!</h1>
+            <p class="seasons-game__description">
+              Нажмите кнопку играть, введите номер месяца (от 1 до 12) и вы узнаете к какому
+              времени года он относится
+            </p>
+            <button class="seasons-game__button" onclick="playFirstSeasonGame()">Играть!</button>
+          </div>
+          <picture class="seasons-game__img">
+            <source srcset="./img/seasons-img-mobile.png" media="(max-width: 768px)" />
+            <source srcset="./img/seasons-img.png" />
+            <img src="./img/seasons-img.png" alt="Логотип первой игры" />
+          </picture>
         </div>
-        <picture class="seasons-game__img">
-          <source srcset="./img/seasons-img-mobile.png" media="(max-width: 768px)" />
-          <source srcset="./img/seasons-img.png" />
-          <img src="./img/seasons-img.png" alt="Логотип первой игры" />
-        </picture>
+        <div class="seasons-game center">
+          <picture class="seasons-game__img">
+            <source srcset="./img/season-img-second-mobile.png" media="(max-width: 768px)" />
+            <source srcset="./img/season-img-second.png" />
+            <img src="./img/season-img-second.png" alt="Логотип первой игры" />
+          </picture>
+          <div class="seasons-game__content">
+            <h1 class="seasons-game__title">Запомни слова</h1>
+            <p class="seasons-game__description">
+              При нажатии на кнопку играть, вы увидите несколько слов, которые вам необходимо запомнить.
+            </p>
+            <button class="seasons-game__button" onclick="playSecondSeasonGame()">Играть!</button>
+          </div>
+        </div>
       </section>
     </main>
     <script src="./js/script.js"></script>

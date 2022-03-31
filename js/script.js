@@ -1,4 +1,4 @@
-function playSeasonGame() {
+function playFirstSeasonGame() {
   const monthNumber = Number(prompt("Введите номер месяца"));
   switch (monthNumber) {
     case 1:
@@ -27,5 +27,27 @@ function playSeasonGame() {
 
     default:
       alert("Вы ввели неверное значение");
+  }
+}
+
+function playSecondSeasonGame(){
+  let arrOfItems = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+
+  for (let i = arrOfItems.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [arrOfItems[i], arrOfItems[j]] = [arrOfItems[j], arrOfItems[i]];
+  } 
+  alert(`Запомните расположение слов \n ${arrOfItems}`);
+
+  const firstQuestion = prompt('Чему равнялся первый элемент массива?');
+  const firstQuestionUpper = firstQuestion[0].toUpperCase() + firstQuestion.slice(1);
+  const secondQuestion = prompt('Чему равнялся последний элемент массива?');
+  const secondQuestionUpper = secondQuestion[0].toUpperCase() + secondQuestion.slice(1);
+  if (firstQuestionUpper === arrOfItems[0] && secondQuestionUpper === arrOfItems[arrOfItems.length - 1]){
+    alert('Поздравляем! У вас отличная память!');
+  } else if (firstQuestionUpper === arrOfItems[0] || secondQuestionUpper === arrOfItems[arrOfItems.length - 1]){
+    alert('У вас почти получилось! Попробуйте еще раз!');
+  } else{
+    alert('Вы проиграли :(');
   }
 }
