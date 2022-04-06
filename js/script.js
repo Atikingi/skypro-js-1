@@ -28,7 +28,7 @@ function playFirstSeasonGame() {
     default:
       alert("Вы ввели неверное значение");
   }
-}
+};
 
 function playSecondSeasonGame(){
   let arrOfItems = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
@@ -50,4 +50,27 @@ function playSecondSeasonGame(){
   } else{
     alert('Вы проиграли :(');
   }
-}
+};
+
+function playThirdSeasonGame(){
+  for (let i = 1; i < 4; i++) {
+    const userAnswer = prompt('Летает без крыльев, плачет без глаз').toLowerCase();
+    const puzzleAnswer = 'туча';
+
+    const help = {
+      1: 'Это не живой объект',
+      2: 'Находится над нами',
+      3: 'Вы проиграли =('
+    }
+
+    if (!userAnswer) {
+      return;
+    }
+
+    if (userAnswer === puzzleAnswer) {
+      return alert('Правильно! Молодец!');
+    }else{
+      alert(help[i]);
+    }
+  }
+};
