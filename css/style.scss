@@ -23,7 +23,7 @@ body {
   padding-top: 217px;
   padding-bottom: 493px;
 
-  background: no-repeat center url(../img/bg-head.jpg);
+  background: no-repeat center url('../img/bg-head.jpg');
   background-size: cover;
 
   &__title {
@@ -109,7 +109,7 @@ body {
 
     background: no-repeat center
         linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%),
-      no-repeat center url(../img/bg-game-1.jpg);
+      no-repeat center url('../img/bg-game-1.jpg');
     border-radius: 16px;
 
     transition: border 0.5s;
@@ -117,11 +117,11 @@ body {
     &:nth-of-type(2) {
       background: no-repeat center
           linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%),
-        no-repeat center url(../img/bg-game-2.jpg);
+        no-repeat center url('../img/bg-game-2.jpg');
     }
 
     &:nth-of-type(3) {
-      background: no-repeat center url(../img/bg-game-3.jpg);
+      background: no-repeat center url('../img/bg-game-3.jpg');
     }
   }
 
@@ -171,7 +171,7 @@ body {
 
     background: no-repeat center
         linear-gradient(180deg, rgba(0, 0, 0, 0) -7.35%, #00091546 100%),
-      url(../img/puzzle-game-img.jpg), #000915;
+      url('../img/puzzle-game-img.jpg'), #000915;
     background-size: cover;
   }
 
@@ -324,7 +324,7 @@ body {
 
 @media (max-width: 375px) and (min-width: 320px) {
   .header {
-    background: no-repeat center url(../img/bg-head-mobile.jpg);
+    background: no-repeat center url('../img/bg-head-mobile.jpg');
   }
 
   .seasons-game {
@@ -335,7 +335,7 @@ body {
     &:last-of-type {
       background: no-repeat center
           linear-gradient(180deg, rgba(0, 0, 0, 0) -7.35%, #00091546 100%),
-        url(../img/puzzle-game-img-mobile.jpg), #000915;
+        url('../img/puzzle-game-img-mobile.jpg'), #000915;
       background-size: contain;
       padding-bottom: 280px;
     }

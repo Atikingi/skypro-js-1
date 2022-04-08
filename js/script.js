@@ -1,63 +1,50 @@
 function playFirstSeasonGame() {
   const monthNumber = Number(prompt("Введите номер месяца"));
-  switch (monthNumber) {
-    case 1:
-    case 2:
-    case 12:
-      alert("Зима");
-      break;
-
-    case 3:
-    case 4:
-    case 5:
-      alert("Весна");
-      break;
-
-    case 6:
-    case 7:
-    case 8:
-      alert("Лето");
-      break;
-
-    case 9:
-    case 10:
-    case 11:
-      alert("Осень");
-      break;
-
-    default:
-      alert("Вы ввели неверное значение");
+  const seasons= {
+    1: 'Зима',
+    2: 'Зима',
+    3: 'Весна',
+    4: 'Весна',
+    5: 'Весна',
+    6: 'Лето',
+    7: 'Лето',
+    8: 'Лето',
+    9: 'Осень',
+    10: 'Осень',
+    11: 'Осень',
+    12: 'Зима',
   }
+  return alert(seasons[monthNumber]);
 };
 
 function playSecondSeasonGame(){
-  let arrOfItems = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+  const fruits = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
 
-  for (let i = arrOfItems.length - 1; i > 0; i--) {
+  for (let i = fruits.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
-    [arrOfItems[i], arrOfItems[j]] = [arrOfItems[j], arrOfItems[i]];
+    [fruits[i], fruits[j]] = [fruits[j], fruits[i]];
   } 
-  alert(`Запомните расположение слов \n ${arrOfItems}`);
+  alert(`Запомните расположение слов \n ${fruits}`);
 
   const firstQuestion = prompt('Чему равнялся первый элемент массива?');
   const firstQuestionUpper = firstQuestion[0].toUpperCase() + firstQuestion.slice(1);
   const secondQuestion = prompt('Чему равнялся последний элемент массива?');
   const secondQuestionUpper = secondQuestion[0].toUpperCase() + secondQuestion.slice(1);
-  if (firstQuestionUpper === arrOfItems[0] && secondQuestionUpper === arrOfItems[arrOfItems.length - 1]){
+  if (firstQuestionUpper === fruits[0] && secondQuestionUpper === fruits[fruits.length - 1]){
     alert('Поздравляем! У вас отличная память!');
-  } else if (firstQuestionUpper === arrOfItems[0] || secondQuestionUpper === arrOfItems[arrOfItems.length - 1]){
+  } else if (firstQuestionUpper === fruits[0] || secondQuestionUpper === fruits[fruits.length - 1]){
     alert('У вас почти получилось! Попробуйте еще раз!');
   } else{
     alert('Вы проиграли :(');
   }
 };
 
-function playThirdSeasonGame(){
+function guessPuzzle(){
   for (let i = 1; i < 4; i++) {
     const userAnswer = prompt('Летает без крыльев, плачет без глаз').toLowerCase();
     const puzzleAnswer = 'туча';
 
-    const help = {
+    const reactions = {
       1: 'Это не живой объект',
       2: 'Находится над нами',
       3: 'Вы проиграли =('
@@ -70,7 +57,7 @@ function playThirdSeasonGame(){
     if (userAnswer === puzzleAnswer) {
       return alert('Правильно! Молодец!');
     }else{
-      alert(help[i]);
+      alert(reactions[i]);
     }
   }
 };
