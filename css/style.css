@@ -28,7 +28,7 @@ body {
           align-items: start;
   padding-top: 217px;
   padding-bottom: 493px;
-  background: no-repeat center url(../img/bg-head.jpg);
+  background: no-repeat center url("../img/bg-head.jpg");
   background-size: cover;
 }
 
@@ -123,20 +123,20 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1;
           flex: 1 1;
-  background: no-repeat center -webkit-gradient(linear, left top, left bottom, from(rgba(39, 1, 15, 0)), to(#001944)), no-repeat center url(../img/bg-game-1.jpg);
-  background: no-repeat center linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%), no-repeat center url(../img/bg-game-1.jpg);
+  background: no-repeat center -webkit-gradient(linear, left top, left bottom, from(rgba(39, 1, 15, 0)), to(#001944)), no-repeat center url("../img/bg-game-1.jpg");
+  background: no-repeat center linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%), no-repeat center url("../img/bg-game-1.jpg");
   border-radius: 16px;
   -webkit-transition: border 0.5s;
   transition: border 0.5s;
 }
 
 .games__item:nth-of-type(2) {
-  background: no-repeat center -webkit-gradient(linear, left top, left bottom, from(rgba(39, 1, 15, 0)), to(#001944)), no-repeat center url(../img/bg-game-2.jpg);
-  background: no-repeat center linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%), no-repeat center url(../img/bg-game-2.jpg);
+  background: no-repeat center -webkit-gradient(linear, left top, left bottom, from(rgba(39, 1, 15, 0)), to(#001944)), no-repeat center url("../img/bg-game-2.jpg");
+  background: no-repeat center linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%), no-repeat center url("../img/bg-game-2.jpg");
 }
 
 .games__item:nth-of-type(3) {
-  background: no-repeat center url(../img/bg-game-3.jpg);
+  background: no-repeat center url("../img/bg-game-3.jpg");
 }
 
 .games__link {
@@ -187,6 +187,15 @@ body {
       flex-wrap: wrap-reverse;
 }
 
+.seasons-game:last-of-type {
+  padding-top: 276px;
+  padding-bottom: 500px;
+  text-align: center;
+  background: no-repeat center -webkit-gradient(linear, left top, left bottom, color-stop(-7.35%, rgba(0, 0, 0, 0)), to(#00091546)), url("../img/puzzle-game-img.jpg"), #000915;
+  background: no-repeat center linear-gradient(180deg, rgba(0, 0, 0, 0) -7.35%, #00091546 100%), url("../img/puzzle-game-img.jpg"), #000915;
+  background-size: cover;
+}
+
 .seasons-game__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -195,6 +204,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.seasons-game__content__center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .seasons-game__title {
@@ -216,6 +231,10 @@ body {
   color: #FFFFFF;
 }
 
+.seasons-game__description__large {
+  max-width: 1200px;
+}
+
 .seasons-game__button {
   width: 234px;
   height: 49px;
@@ -235,6 +254,20 @@ body {
 .seasons-game__button:hover {
   background: #EB443F;
   cursor: pointer;
+}
+
+.footer {
+  padding-top: 33px;
+  padding-bottom: 33px;
+  text-align: center;
+  background: #000915;
+}
+
+.footer__title {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
 }
 
 @media (max-width: 768px) and (min-width: 320px) {
@@ -307,10 +340,16 @@ body {
 
 @media (max-width: 375px) and (min-width: 320px) {
   .header {
-    background: no-repeat center url(../img/bg-head-mobile.jpg);
+    background: no-repeat center url("../img/bg-head-mobile.jpg");
   }
   .seasons-game__title {
     text-align: center;
+  }
+  .seasons-game:last-of-type {
+    background: no-repeat center -webkit-gradient(linear, left top, left bottom, color-stop(-7.35%, rgba(0, 0, 0, 0)), to(#00091546)), url("../img/puzzle-game-img-mobile.jpg"), #000915;
+    background: no-repeat center linear-gradient(180deg, rgba(0, 0, 0, 0) -7.35%, #00091546 100%), url("../img/puzzle-game-img-mobile.jpg"), #000915;
+    background-size: contain;
+    padding-bottom: 280px;
   }
 }
 

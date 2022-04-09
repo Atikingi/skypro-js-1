@@ -23,7 +23,7 @@ body {
   padding-top: 217px;
   padding-bottom: 493px;
 
-  background: no-repeat center url(../img/bg-head.jpg);
+  background: no-repeat center url('../img/bg-head.jpg');
   background-size: cover;
 
   &__title {
@@ -84,15 +84,13 @@ body {
   }
 }
 
-.main{
+.main {
   background: $color-background-games;
 }
 
 .games {
   padding-top: 128px;
   margin-bottom: 128px;
-
-  
 
   &__list {
     display: flex;
@@ -111,7 +109,7 @@ body {
 
     background: no-repeat center
         linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%),
-      no-repeat center url(../img/bg-game-1.jpg);
+      no-repeat center url('../img/bg-game-1.jpg');
     border-radius: 16px;
 
     transition: border 0.5s;
@@ -119,11 +117,11 @@ body {
     &:nth-of-type(2) {
       background: no-repeat center
           linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%),
-        no-repeat center url(../img/bg-game-2.jpg);
+        no-repeat center url('../img/bg-game-2.jpg');
     }
 
     &:nth-of-type(3) {
-      background: no-repeat center url(../img/bg-game-3.jpg);
+      background: no-repeat center url('../img/bg-game-3.jpg');
     }
   }
 
@@ -160,13 +158,30 @@ body {
   row-gap: 64px;
   padding-top: 234px;
   padding-bottom: 282px;
-  &:nth-of-type(2){
+
+  &:nth-of-type(2) {
     flex-wrap: wrap-reverse;
+  }
+
+  &:last-of-type {
+    padding-top: 276px;
+    padding-bottom: 500px;
+
+    text-align: center;
+
+    background: no-repeat center
+        linear-gradient(180deg, rgba(0, 0, 0, 0) -7.35%, #00091546 100%),
+      url('../img/puzzle-game-img.jpg'), #000915;
+    background-size: cover;
   }
 
   &__content {
     display: flex;
     flex-direction: column;
+
+    &__center {
+      align-items: center;
+    }
   }
 
   &__title {
@@ -188,6 +203,10 @@ body {
     font-size: 18px;
     line-height: 32px;
     color: $color-games-white;
+
+    &__large {
+      max-width: 1200px;
+    }
   }
 
   &__button {
@@ -211,6 +230,22 @@ body {
       background: $color-header-button-hover;
       cursor: pointer;
     }
+  }
+}
+
+.footer {
+  padding-top: 33px;
+  padding-bottom: 33px;
+
+  text-align: center;
+
+  background: #000915;
+
+  &__title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: $color-header-white;
   }
 }
 
@@ -289,12 +324,20 @@ body {
 
 @media (max-width: 375px) and (min-width: 320px) {
   .header {
-    background: no-repeat center url(../img/bg-head-mobile.jpg);
+    background: no-repeat center url('../img/bg-head-mobile.jpg');
   }
 
   .seasons-game {
     &__title {
       text-align: center;
+    }
+
+    &:last-of-type {
+      background: no-repeat center
+          linear-gradient(180deg, rgba(0, 0, 0, 0) -7.35%, #00091546 100%),
+        url('../img/puzzle-game-img-mobile.jpg'), #000915;
+      background-size: contain;
+      padding-bottom: 280px;
     }
   }
 }
